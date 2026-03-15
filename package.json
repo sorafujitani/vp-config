@@ -1,0 +1,51 @@
+{
+  "name": "@sorafujitani/vp-config",
+  "version": "0.0.1",
+  "description": "Vite Plus configuration for @sorafujitani",
+  "homepage": "https://github.com/sorafujitani/vp-config#readme",
+  "bugs": {
+    "url": "https://github.com/sorafujitani/vp-config/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Sora Fujitani"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sorafujitani/vp-config.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "vp pack",
+    "dev": "vp pack --watch",
+    "test": "vp test",
+    "typecheck": "tsgo --noEmit",
+    "prepublishOnly": "pnpm run build",
+    "prepack": "vp pack",
+    "release": "bumpp --commit \"release: v%s\" --all --push --tag",
+    "prepare": "vp config"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.5",
+    "@typescript/native-preview": "7.0.0-dev.20260309.1",
+    "bumpp": "^10.4.1",
+    "typescript": "^5.9.3",
+    "vite-plus": "latest",
+    "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
+  },
+  "packageManager": "pnpm@10.32.1",
+  "pnpm": {
+    "overrides": {
+      "vite": "npm:@voidzero-dev/vite-plus-core@latest",
+      "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
+    }
+  }
+}
