@@ -27,25 +27,23 @@
     "build": "vp pack",
     "dev": "vp pack --watch",
     "test": "vp test",
-    "typecheck": "tsgo --noEmit",
-    "prepublishOnly": "pnpm run build",
+    "typecheck": "vp check",
+    "prepublishOnly": "vp pack",
     "prepack": "vp pack",
     "release": "bumpp --commit \"release: v%s\" --all --push --tag",
     "prepare": "vp config"
   },
   "devDependencies": {
     "@types/node": "^25.3.5",
-    "@typescript/native-preview": "7.0.0-dev.20260309.1",
+    "@typescript/native-preview": "^7.0.0-dev.20260315.1",
     "bumpp": "^10.4.1",
     "typescript": "^5.9.3",
-    "vite-plus": "latest",
+    "vite-plus": "^0.1.11",
     "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
   },
-  "packageManager": "pnpm@10.32.1",
-  "pnpm": {
-    "overrides": {
-      "vite": "npm:@voidzero-dev/vite-plus-core@latest",
-      "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
-    }
-  }
+  "overrides": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@latest",
+    "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
+  },
+  "packageManager": "pnpm@10.32.1"
 }
