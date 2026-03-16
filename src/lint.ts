@@ -1,3 +1,5 @@
+import type { OxlintConfig } from "oxlint";
+
 const config = {
   categories: {
     correctness: "error",
@@ -75,6 +77,6 @@ const config = {
     "sort-imports": "off",
     "sort-keys": "off",
   },
-} as const;
+} satisfies OxlintConfig;
 
 export default config;

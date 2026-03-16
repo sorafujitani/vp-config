@@ -1,3 +1,5 @@
+import type { FormatOptions } from "oxfmt";
+
 const config = {
   arrowParens: "always",
   bracketSpacing: true,
@@ -10,6 +12,6 @@ const config = {
   tabWidth: 2,
   trailingComma: "all",
   useTabs: false,
-} as const;
+} satisfies FormatOptions;
 
 export default config;
