@@ -1,9 +1,11 @@
 # CLAUDE.md
 
 ## Overview
+
 `@sorafujitani/vp-config` — Reusable npm package providing shared vite-plus configuration (fmt / lint / test).
 
 ## Tech Stack
+
 - **Runtime**: Node.js (ESM)
 - **Build**: vite-plus (`vp pack`) + tsdown
 - **Type checking**: tsgo (`@typescript/native-preview`)
@@ -11,6 +13,7 @@
 - **Package manager**: pnpm (managed via `vp`)
 
 ## Commands
+
 - `vp pack` — Build (generates `dist/index.mjs`, `dist/index.d.mts`)
 - `vp pack --watch` — Build in watch mode
 - `vp test` — Run tests
@@ -18,6 +21,7 @@
 - `vp exec bumpp` — Release with bumpp
 
 ## Structure
+
 ```
 src/
   index.ts      # re-export (fmt, lint, test)
@@ -27,6 +31,7 @@ src/
 ```
 
 ## Notes
+
 - `vite.config.ts` imports from its own `src/` for dogfooding
 - pnpm overrides map `vite` → `@voidzero-dev/vite-plus-core` and `vitest` → `@voidzero-dev/vite-plus-test`
 - `tsdown.config.ts` uses `dts: { tsgo: true }` (experimental)
