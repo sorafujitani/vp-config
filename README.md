@@ -2,7 +2,6 @@
 
 Reusable [vite-plus](https://github.com/nicepkg/vite-plus) configuration providing shared **format**, **lint**, and **test** presets.
 
-Based on [kazupon/vp-config](https://github.com/nicepkg/vite-plus) structure.
 
 ## Install
 

@@ -2,7 +2,7 @@
 
 ## Overview
 `@sorafujitani/vp-config` — Reusable npm package providing shared vite-plus configuration (fmt / lint / test).
-Based on kazupon/vp-config structure, extracted from the memoli repository.
+
 
 ## Tech Stack
 - **Runtime**: Node.js (ESM)
