@@ -1,4 +1,6 @@
-import type { OxlintConfig } from "vite-plus/lint";
+import type { UserConfig } from "vite-plus";
+
+type OxlintConfig = NonNullable<UserConfig["lint"]>;
 
 const config = {
   categories: {

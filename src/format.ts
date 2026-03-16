@@ -1,4 +1,6 @@
-import type { FormatOptions } from "oxfmt";
+import type { UserConfig } from "vite-plus";
+
+type FormatOptions = NonNullable<UserConfig["fmt"]>;
 
 const config = {
   arrowParens: "always",
