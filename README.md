@@ -2,11 +2,10 @@
 
 Reusable [vite-plus](https://github.com/nicepkg/vite-plus) configuration providing shared **format**, **lint**, and **test** presets.
 
-
 ## Install
 
 ```bash
-pnpm add -D @sorafujitani/vp-config
+vp add -D @sorafujitani/vp-config
 ```
 
 ## Usage
@@ -133,11 +132,11 @@ Vitest include pattern:
 ## Development
 
 ```bash
-pnpm run build       # Build with vp pack
-pnpm run dev         # Build in watch mode
-pnpm run test        # Run tests
-pnpm run typecheck   # Type check with tsgo
-pnpm run release     # Release with bumpp
+vp pack              # Build
+vp pack --watch      # Build in watch mode
+vp test              # Run tests
+vp check             # Format, lint, and type check
+vp exec bumpp        # Release with bumpp
 ```
 
 ## License

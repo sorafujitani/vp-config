@@ -3,20 +3,19 @@
 ## Overview
 `@sorafujitani/vp-config` — Reusable npm package providing shared vite-plus configuration (fmt / lint / test).
 
-
 ## Tech Stack
 - **Runtime**: Node.js (ESM)
 - **Build**: vite-plus (`vp pack`) + tsdown
 - **Type checking**: tsgo (`@typescript/native-preview`)
 - **Testing**: vitest (`@voidzero-dev/vite-plus-test`)
-- **Package manager**: pnpm
+- **Package manager**: pnpm (managed via `vp`)
 
 ## Commands
-- `pnpm run build` — Build (generates `dist/index.mjs`, `dist/index.d.mts`)
-- `pnpm run dev` — Build in watch mode
-- `pnpm run test` — Run tests
-- `pnpm run typecheck` — Type check with tsgo
-- `pnpm run release` — Release with bumpp
+- `vp pack` — Build (generates `dist/index.mjs`, `dist/index.d.mts`)
+- `vp pack --watch` — Build in watch mode
+- `vp test` — Run tests
+- `vp check` — Format, lint, and type check
+- `vp exec bumpp` — Release with bumpp
 
 ## Structure
 ```
